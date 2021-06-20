@@ -2,6 +2,7 @@
 FROM ghcr.io/arghyac35/aria-telegram-mirror-bot:main
 
 WORKDIR /bot/
+RUN rm /bot/start.sh
 COPY ./start.sh /bot/start.sh
 RUN apk add --no-cache python3 py3-pip
 RUN pip3 install flask
