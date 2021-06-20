@@ -19,4 +19,4 @@ echo -e "bt-tracker=$tracker_list" >> $(pwd)/aria.conf
 # Remove the .bak file got created from above sed
 test -f $(pwd)/aria.conf-e && rm $(pwd)/aria.conf-e
 
-aria2c --conf-path=aria.conf && echo "Aria2c daemon started" && npm start
+aria2c --conf-path=aria.conf && npm install && tsc && python3 clever.py && npm start
