@@ -21,5 +21,4 @@ test -f $(pwd)/aria.conf-e && rm $(pwd)/aria.conf-e
 
 aria2c --conf-path=aria.conf
 echo "Aria2c daemon started"
-npm start
-python3 clever.py
+npm start && python3 clever.py
